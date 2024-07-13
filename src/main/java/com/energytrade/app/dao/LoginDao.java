@@ -428,7 +428,7 @@ public HashMap<String,Object> loginDSOUser(String email,String password) {
 public ArrayList<GeneralConfig> getBlockChainValue() {
 	ArrayList<GeneralConfig> configValue = new ArrayList<>();
 	ArrayList<String> listOfKeys = new ArrayList<>();
-	listOfKeys.add("p2p_blockchain_enabled");
+	listOfKeys.add("dr_blockchain_enabled");
 	listOfKeys.add("blockchain_uat");
 	try {
 		configValue=userdevicerepo.getBlockChainConfig(listOfKeys);

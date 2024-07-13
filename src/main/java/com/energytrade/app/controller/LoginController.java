@@ -1,6 +1,7 @@
 package com.energytrade.app.controller;
 
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import java.util.HashMap;
@@ -74,4 +75,10 @@ public class LoginController extends AbstractBaseController
     	return response;
     }
     
-      }
+    @RequestMapping(value ="catchOauthToken" , method =  RequestMethod.GET , headers =  "Accept=application/json" )
+    public void getKiotToken(@RequestParam("code") String newauthcode) {
+        
+    	System.out.println("Token from Kiot " +newauthcode);
+    }
+    
+   }
